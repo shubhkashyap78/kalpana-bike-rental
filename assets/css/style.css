@@ -561,30 +561,120 @@ details {
   transform: translateY(0);
 }
 
-@media (max-width: 900px) {
-  .nav {
+/* Tablet */
+@media (max-width: 1024px) {
+  .fleet-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pricing-grid,
+  .testimonial-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .nav,
+  .site-header .btn {
     display: none;
   }
 
-  .hero-grid,
-  .section-head,
-  .fleet-grid,
-  .pricing-grid,
-  .testimonial-grid,
-  .process-grid,
-  .testimonial-grid,
-  .faq-grid,
-  .cta-grid,
-  .footer-grid,
-  .strip-grid {
-    grid-template-columns: 1fr;
+  .site-header .container {
+    padding: 14px 0;
   }
 
   .hero {
-    padding-top: 90px;
+    padding: 70px 0 50px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .section-head {
+    grid-template-columns: 1fr;
+  }
+
+  .strip-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    font-size: 0.8rem;
+  }
+
+  .fleet-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .fleet-img img {
+    height: 130px;
+  }
+
+  .fleet-card,
+  .price-card,
+  .quote {
+    padding: 16px;
+  }
+
+  .pricing-grid,
+  .testimonial-grid,
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-grid {
+    grid-template-columns: 1fr;
   }
 
   .cta-actions {
     justify-content: flex-start;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-card {
+    padding: 18px;
+  }
+
+  .price-big {
+    font-size: 1.8rem;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 400px) {
+  .fleet-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .strip-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
